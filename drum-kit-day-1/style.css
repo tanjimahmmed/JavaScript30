@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background-image: url(./hanny-naibaho-aWXVxy8BSzc-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.key {
+    border: .4rem solid black;
+    border-radius: 0.5rem;
+    margin: .5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.2rem;
+    transition: all 0.7s ease;
+    width: 7rem;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 0.5rem black;
+}
+
+kbd {
+    display: block;
+    font-size: 2.2rem;
+    font-family:
+    monospace;
+}
+
+.sound {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc107;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc107;
+    box-shadow: 0 0 1rem #ffc107;
+}
