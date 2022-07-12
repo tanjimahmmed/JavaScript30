@@ -34,6 +34,16 @@ const people = ['Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Ll
 
 // console.table(inventorName);
 
+// const fifteen = inventors.filter(function(inventor){
+//     if(inventor.year >= 1400 && inventor.year < 1599){
+//         return true;
+//     }
+// });
+
+// const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600))
+
+// console.table(fifteen);
+
 // Array.prototyple.map()
 // 2. Give us an array of the inventory first and last name
 // first way
@@ -41,6 +51,10 @@ const people = ['Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Ll
 // second way
 // const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}` );
 // console.table(fullNames);
+
+// const fullNames = inventors.map(inventor => inventor.first + ' ' + inventor.last);
+// const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+// console.log(fullNames);
 
 // Array.protype.sort();
 // 3. Sort the inventors by birthdate, oldest to youngest
@@ -57,6 +71,19 @@ const people = ['Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Ll
 
 // console.table(order);
 
+// const order = inventors.sort(function(a, b){
+//     if(a.year > b.year){
+//         return 1;
+//     }else {
+//         return -1;
+//     }
+// });
+
+// console.log(order);
+
+// const older = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+// console.table(older);
+
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 // const totalYears = inventors.reduce((total, inventor) => {
@@ -65,6 +92,10 @@ const people = ['Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Ll
 
 // console.log(totalYears);
 
+// const years = inventors.reduce((total, inventor) => {
+//     return total + (inventor.passed - inventor.year)
+// }, 0)
+// console.log(years);
 // 5. Sort the inventors by years lived
 // const oldest = inventors.sort(function(a, b){
 //     const lastGuy = a.passed - a.year;
@@ -104,15 +135,15 @@ const people = ['Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Ll
 // 8. reduce exercise
 // sum up the instances of each of these
 
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+// const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-const transportation = data.reduce(function(obj, item){
-    // console.log(item);
-    if(!obj[item]){
-        obj[item] = 0;
-    }
-    obj[item]++;
-    return obj;
-}, {});
+// const transportation = data.reduce(function(obj, item){
+//     // console.log(item);
+//     if(!obj[item]){
+//         obj[item] = 0;
+//     }
+//     obj[item]++;
+//     return obj;
+// }, {});
 
-console.log(transportation);
+// console.log(transportation);
