@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Array day 14</title>
+</head>
+<body>
+    
+
+    <script>
+        // start with string number and booleans
+        // let age = 100;
+        // let age2 = age;
+        // console.log(age, age2);
+        // age = 200;
+        // console.log(age, age2);
+
+        // let name = 'Tanjim';
+        // let name2 = name;
+        // console.log(name, name2);
+        // name = 'TJ'
+        // console.log(name, name2);
+
+        // lets we have an array
+        const players = ['wes', 'sarah', 'ryhan', 'poppy'];
+
+        // and we want to make a copy of it.
+        const team = players;
+
+        console.log(players, team);
+
+        // this will also change the main array
+        team[3] = 'Cup Cake';
+
+        // why? it's because that is an array reference, not an array copy. They both point to the same arrat!
+
+        // so, how do we fix this? we take a copy instead!
+        const team2 = players.slice();
+        const team3 = [].concat(players);
+
+        // or use the new es6 spead
+        const team4 = [...players];
+        team4[3] = 'Unsocial';
+        console.log(team4);
+
+        const team5 = Array.from(players);
+
+        // with object
+        const person = {
+            name: 'Wes Bos',
+            age: 80
+        };
+
+        const captain = person;
+        captain.number = 99;
+
+        console.log(person);
+
+        // how do we take a copy instead?
+        const cap2 = Object.assign({}, person, {number: 99, age: 23});
+        console.log(cap2);
+
+        // we will hopefully soon see the object ...spread
+        const cap3 = {...person};
+
+        const TJ = {
+            name: 'TJ',
+            age: 23,
+            social: {
+                twitter: '@webos',
+                facebook: 'wesbos.developer',
+            }
+        }
+        console.clear();
+        console.log(TJ);
+
+        const dev = Object.assign({}, TJ);
+        
+        const dev2 = JSON.parse(JSON.stringify(TJ))
+
+
+
+    </script>
+</body>
+</html>
